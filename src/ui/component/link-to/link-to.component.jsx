@@ -3,6 +3,8 @@ import './style.css'
 
 export const LinkTo = ({ to, children }) => {
   return (
-    <Link to={to} className='link__link'>{children}</Link>
+    <div className='link__content'>
+      <Link to={to} className='link__link'>{children}</Link>
+    </div>
   )
 }
