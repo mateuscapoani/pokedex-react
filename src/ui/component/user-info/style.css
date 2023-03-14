@@ -1,0 +1,11 @@
+.user-info__content {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.user-info__username {
+  font-size: 20px;
+}

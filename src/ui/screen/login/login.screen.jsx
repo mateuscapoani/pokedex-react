@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Container, Form, Input, Button } from '../../component'
+import { Container, Form, Input, Button, LinkTo } from '../../component'
 import { constants, useGlobalUserState } from '../../../context'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 export const LoginScreen = () => {
   const history = useHistory()
@@ -38,9 +38,9 @@ export const LoginScreen = () => {
           type='password'
           required
         />
-        <Button type='submit'>Entrar</Button>
+        <Button type='submit' primary>Entrar</Button>
       </Form>
-      <Link to={constants.routes.register}>Registre-se</Link>
+      <LinkTo to={constants.routes.register}>Registre-se</LinkTo>
     </Container>
   )
 }

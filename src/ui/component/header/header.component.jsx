@@ -1,7 +1,8 @@
-import { Container, Button } from '../'
+import { Container, UserInfo } from '../'
 import { constants, useGlobalUserState } from '../../../context'
 import { Link, useHistory } from 'react-router-dom'
 import logo from '../../../assets/images/logo.png'
+import './style.css'
 
 export const Header = () => {
   const history = useHistory()
@@ -16,9 +17,14 @@ export const Header = () => {
   return (
     <header>
       <Container>
-        <Link to={constants.routes.main}><img className='header__logo' src={logo} alt='Logo React Pokedex' /></Link>
-        {user?.loggedUser && <span>{user.username}</span>}
-        {user?.loggedUser && <Button onClick={logout}>Sair</Button>}
+        <div className='header__content'>
+          <Link to={constants.routes.main}><img className='header__logo' src={logo} alt='Logo React Pokedex' /></Link>
+          <UserInfo
+            userLogged={user?.loggedUser}
+            username={user.username}
+            handleLogout={logout}
+          />
+        </div>
       </Container>
     </header>
   )

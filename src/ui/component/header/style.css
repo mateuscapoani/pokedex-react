@@ -1,0 +1,14 @@
+header {
+  background-color: #FF887E;
+  border-bottom: 1px #000 solid;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.header__logo {
+  height: 100px;
+}

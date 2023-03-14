@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Container, Form, Input, Button } from '../../component'
+import { Container, Form, Input, Button, LinkTo } from '../../component'
 import { constants, useGlobalUserState } from '../../../context'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 export const RegisterScreen = () => {
   const history = useHistory()
@@ -18,7 +18,7 @@ export const RegisterScreen = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    if (verifyPassword) {
+    if (verifyPassword()) {
       setUser({
         loggedUser: true,
         username: username,
@@ -63,9 +63,9 @@ export const RegisterScreen = () => {
           type='password'
           required
         />
-        <Button type='submit'>Registrar</Button>
+        <Button type='submit' primary>Registrar</Button>
       </Form>
-      <Link to={constants.routes.login}>Login</Link>
+      <LinkTo to={constants.routes.login}>Login</LinkTo>
     </Container>
   )
 }

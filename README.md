@@ -14,6 +14,8 @@ Para criação da base da aplicação, foi utilizado `npx create-react-app`
 ## Node usado no desenvolvimento:
 v16.15.0
 
-## Disponivel na url:
-- Tarefa M3: https://pokedex-react-mateuscapoani-m3.vercel.app/
-- Última versão: https://pokedex-react-mateuscapoani.vercel.app/
+## Tarefa M3:
+- Criação da base da aplicação;
+- Criação de rotas;
+- Tela de Cadastro e Login (sem conexão com APIs);
+- Disponível em: https://pokedex-react-mateuscapoani-m3.vercel.app/
