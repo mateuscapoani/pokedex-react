@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Container, Form, Input, Button, LinkTo } from '../../component'
+import { Container, Form, Input, Button, LinkTo, Message } from '../../component'
 import { constants, useGlobalUserState } from '../../../context'
 import { useHistory } from 'react-router-dom'
 
@@ -11,9 +11,16 @@ export const RegisterScreen = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
+  const [showError, setShowError] = useState(false)
+  const [erroMessage, setErroMessage] = useState('')
 
   const verifyPassword = () => {
-    return password === confirmPassword
+    if (password !== confirmPassword) {
+      setShowError(true)
+      setErroMessage('A senha e a confirmação de senha devem ser iguais')
+      return false
+    }
+    return true
   }
 
   const handleSubmit = (event) => {
@@ -25,11 +32,18 @@ export const RegisterScreen = () => {
         email: email
       })
       history.push(constants.routes.main)
+    } else {
+
     }
   }
 
   return (
     <Container>
+      <Message
+        show={showError}
+        message={erroMessage}
+        error
+      />
       <Form onSubmit={handleSubmit}>
         <Input
           name='username'

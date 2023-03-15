@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Container, Form, Input, Button, LinkTo } from '../../component'
+import { Container, Form, Input, Button, LinkTo, Message } from '../../component'
 import { constants, useGlobalUserState } from '../../../context'
 import { useHistory } from 'react-router-dom'
 
@@ -9,6 +9,8 @@ export const LoginScreen = () => {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [showError, setShowError] = useState(false)
+  const [erroMessage, setErroMessage] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -21,6 +23,11 @@ export const LoginScreen = () => {
 
   return (
     <Container>
+      <Message
+        show={showError}
+        message={erroMessage}
+        error
+      />
       <Form onSubmit={handleSubmit}>
         <Input
           name='username'

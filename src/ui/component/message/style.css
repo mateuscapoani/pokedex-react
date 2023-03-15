@@ -1,0 +1,27 @@
+.message__content {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.message__error {
+  border-color: #ff6a6f;
+  background-color: #ffb6b9;
+}
+
+.message__success {
+  border-color: #5ed6a4;
+  background-color: #AADFD1;
+}
+
+.message__info {
+  border-color: #FEE3B8;
+  background-color: #FEF2E1;
+}
+
+.message__text {
+  font-size: 16px;
+}

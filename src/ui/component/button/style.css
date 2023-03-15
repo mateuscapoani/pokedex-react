@@ -13,20 +13,20 @@
 }
 
 .button__primary {
-  background-color: #FF887E;
+  background-color: #FEE3B8;
   margin: 10px 20px;
   font-size: 18px;
 }
 
 .button__primary:hover {
-  background-color: #ffcac5;
+  background-color: #FEF2E1;
 }
 
 .button__secondary {
-  background-color: #fff7f6;
+  background-color: #FFF;
   font-size: 16px;
 }
 
 .button__secondary:hover {
-  background-color: #ffcac5;
+  background-color: #FEF2E1;
 }
