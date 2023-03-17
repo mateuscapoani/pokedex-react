@@ -1,4 +1,6 @@
 # Pokedex React
+Aplicação criada para ser usada e evoluida durante toda a cadeira de Programação Front-end da Unisinos.
+
 ## Aluno:
 Mateus Capoani Vieira
 
