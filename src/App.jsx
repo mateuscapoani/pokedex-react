@@ -42,7 +42,7 @@ export const App = () => {
         <Header />
         <MainScreen />
       </PrivateRoute>
-      <OnlyPublicRoute path={constants.routes.register}>
+      <OnlyPublicRoute path={constants.routes.register} exact>
         <Header />
         <RegisterScreen />
       </OnlyPublicRoute>
