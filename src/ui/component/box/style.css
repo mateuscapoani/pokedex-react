@@ -1,0 +1,16 @@
+.box__content {
+  display: flex;
+}
+
+.box__center {
+  align-items: center;
+  justify-content: center;
+}
+
+.box__column {
+  flex-direction: column;
+}
+
+.box__padding {
+  padding: 20px;
+}

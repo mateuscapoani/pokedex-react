@@ -1,4 +1,4 @@
-import { Container, UserInfo } from '../'
+import { Container, UserInfo, Image } from '../'
 import { constants, useGlobalUserState } from '../../../context'
 import { Link, useHistory } from 'react-router-dom'
 import logo from '../../../assets/images/logo.png'
@@ -18,7 +18,7 @@ export const Header = () => {
     <header>
       <Container>
         <div className='header__content'>
-          <Link to={constants.routes.main}><img className='header__logo' src={logo} alt='Logo React Pokedex' /></Link>
+          <Link to={constants.routes.main}><Image src={logo} alt='Logo React Pokedex' size='100' /></Link>
           <UserInfo
             userLogged={user?.loggedUser}
             username={user.username}

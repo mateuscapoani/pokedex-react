@@ -5,7 +5,7 @@ export const MainScreen = () => {
   return (
     <main>
       <Container>
-        main screen
+        main screen - aqui haverá a lista paginada de pokémons
       </Container>
     </main>
   )

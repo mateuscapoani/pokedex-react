@@ -5,6 +5,13 @@
   justify-content: center;
   border: 2px solid;
   border-radius: 10px;
+  margin: 10px 0;
+}
+
+.message__block-space {
+  min-height: 45px;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 .message__error {

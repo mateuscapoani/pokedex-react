@@ -27,6 +27,7 @@ export const LoginScreen = () => {
         show={showError}
         message={erroMessage}
         error
+        blockSpace
       />
       <Form onSubmit={handleSubmit}>
         <Input
