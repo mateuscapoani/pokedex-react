@@ -9,6 +9,9 @@ Aplicação criada para realização de atividades da cadeira de Programação F
 
 Para criação da base da aplicação, foi utilizado `npx create-react-app`
 
+## Repositório:
+https://github.com/mateuscapoani/pokedex-react
+
 ## Como rodar:
 - `yarn install` ou `npm install`
 - `yarn start` ou `npm start`
