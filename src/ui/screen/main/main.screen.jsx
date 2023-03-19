@@ -1,4 +1,4 @@
-import { Container, Button, Box, PokemonCard } from '../../component'
+import { Container, Button, Box, PokemonCard, Loader } from '../../component'
 import { usePokeapi, useQuery } from '../../../hook'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
@@ -15,6 +15,7 @@ const handlePage = (pageNum) => {
 export const MainScreen = () => {
   const query = useQuery()
   const history = useHistory()
+  const [loading, setLoading] = useState(true)
   const [pokemons, setPokemons] = useState([])
   const [sizePokemons, setSizePokemons] = useState(0)
   const [page, setPage] = useState(query.get(constants.page.name) ? parseInt(query.get(constants.page.name)) : 1)
@@ -27,6 +28,7 @@ export const MainScreen = () => {
     const callAPI = async () => {
       try {
         const { data } = await getPokemonList(handlePage(page))
+        setLoading(false)
         setPokemons(data.results)
         setSizePokemons(data.count)
       } catch (err) {
@@ -36,12 +38,15 @@ export const MainScreen = () => {
 
     const lastPage = Math.ceil(sizePokemons / constants.page.size)
 
-    if (page < 1)
+    if (page < 1) {
       setPage(1)
-    else if (sizePokemons > 0 && page > lastPage)
+      setLoading(true)
+    } else if (sizePokemons > 0 && page > lastPage) {
       setPage(lastPage)
-    else
+      setLoading(true)
+    } else {
       callAPI()
+    }
 
     history.push(`?${constants.page.name}=${page}`)
   }, [page])
@@ -52,10 +57,12 @@ export const MainScreen = () => {
 
   const prevPage = () => {
     setPage(page - 1)
+    setLoading(true)
   }
 
   const nextPage = () => {
     setPage(page + 1)
+    setLoading(true)
   }
 
   const pokemonDetails = (pokemonId) => {
@@ -69,15 +76,16 @@ export const MainScreen = () => {
           <Button onClick={prevPage} disabled={prevPageButtonDisabled} primary>Página Anterior</Button>
           <Button onClick={nextPage} disabled={nextPageButtonDisabled} primary>Próxima Página</Button>
         </Box>
-        {pokemons.map(pokemon => {
-          const pokemonId = pokemon.url.replace(new RegExp('.*' + 'api/v2/pokemon/'), '').slice(0, -1)
-          return <PokemonCard
-            key={pokemonId}
-            pokemonId={pokemonId}
-            pokemonName={captalizeName(pokemon.name)}
-            onClick={pokemonDetails}
-          />
-        })}
+        {loading ? <Loader show={loading} /> :
+          pokemons.map(pokemon => {
+            const pokemonId = pokemon.url.replace(new RegExp('.*' + 'api/v2/pokemon/'), '').slice(0, -1)
+            return <PokemonCard
+              key={pokemonId}
+              pokemonId={pokemonId}
+              pokemonName={captalizeName(pokemon.name)}
+              onClick={pokemonDetails}
+            />
+          })}
       </Container>
     </main >
   )
