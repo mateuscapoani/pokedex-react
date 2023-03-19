@@ -6,7 +6,6 @@ import { useHistory } from 'react-router-dom'
 export const LoginScreen = () => {
   const history = useHistory()
   const [_, setUser] = useGlobalUserState()
-
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showError, setShowError] = useState(false)

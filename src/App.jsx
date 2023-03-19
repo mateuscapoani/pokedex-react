@@ -1,5 +1,5 @@
 import { Header } from './ui/component'
-import { LoginScreen, MainScreen, RegisterScreen, NotFoundScreen } from './ui/screen'
+import { LoginScreen, MainScreen, RegisterScreen, NotFoundScreen, PokemonScreen } from './ui/screen'
 import { constants, useGlobalUserState } from './context'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
@@ -38,14 +38,18 @@ export const App = () => {
         <Header />
         <LoginScreen />
       </OnlyPublicRoute>
-      <PrivateRoute path={constants.routes.main} exact>
-        <Header />
-        <MainScreen />
-      </PrivateRoute>
       <OnlyPublicRoute path={constants.routes.register} exact>
         <Header />
         <RegisterScreen />
       </OnlyPublicRoute>
+      <PrivateRoute path={constants.routes.main} exact>
+        <Header />
+        <MainScreen />
+      </PrivateRoute>
+      <PrivateRoute path={constants.routes.pokemon + '/:idPokemon'} exact>
+        <Header />
+        <PokemonScreen />
+      </PrivateRoute>
       <Route path={constants.routes.all}>
         <Header />
         <NotFoundScreen />

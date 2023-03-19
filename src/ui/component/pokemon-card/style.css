@@ -1,0 +1,16 @@
+.pokemon-card__content {
+  background-color: #FEE3B8;
+  margin: 5px;
+  padding: 2px;
+  cursor: pointer;
+  border: solid 1px #000;
+  border-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-card__content:hover {
+  background-color: #FEF2E1;
+}

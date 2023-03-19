@@ -6,7 +6,6 @@ import { useHistory } from 'react-router-dom'
 export const RegisterScreen = () => {
   const history = useHistory()
   const [_, setUser] = useGlobalUserState()
-
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -32,8 +31,6 @@ export const RegisterScreen = () => {
         email: email
       })
       history.push(constants.routes.main)
-    } else {
-
     }
   }
 
