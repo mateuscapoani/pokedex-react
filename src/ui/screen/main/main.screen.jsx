@@ -22,8 +22,8 @@ export const MainScreen = () => {
   const [page, setPage] = useState(query.get(constants.page.name) ? parseInt(query.get(constants.page.name)) : 1)
   const { getPokemonList } = usePokeapi()
 
-  const prevPageButtonDisabled = page <= 1
-  const nextPageButtonDisabled = page > sizePokemons / constants.page.size
+  const prevPageButtonDisabled = page <= 1 || loading
+  const nextPageButtonDisabled = (page > sizePokemons / constants.page.size) || loading
 
   useEffect(() => {
     const callAPI = async () => {
