@@ -1,0 +1,10 @@
+.type__content {
+  color: #FFF;
+  display: block;
+  width: 90px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  text-align: center;
+  padding: 2px;
+}

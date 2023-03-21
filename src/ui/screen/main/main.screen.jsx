@@ -3,6 +3,7 @@ import { usePokeapi, useQuery } from '../../../hook'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { constants } from '../../../context'
+import { captalize } from '../../../service'
 
 const handlePage = (pageNum) => {
   const offset = (pageNum - 1) * constants.page.size
@@ -51,10 +52,6 @@ export const MainScreen = () => {
     history.push(`?${constants.page.name}=${page}`)
   }, [page])
 
-  const captalizeName = (name) => {
-    return name.charAt(0).toUpperCase() + name.slice(1)
-  }
-
   const prevPage = () => {
     setPage(page - 1)
     setLoading(true)
@@ -82,7 +79,7 @@ export const MainScreen = () => {
             return <PokemonCard
               key={pokemonId}
               pokemonId={pokemonId}
-              pokemonName={captalizeName(pokemon.name)}
+              pokemonName={captalize(pokemon.name)}
               onClick={pokemonDetails}
             />
           })}

@@ -24,3 +24,10 @@ v16.15.0
 - Criação de rotas;
 - Tela de Cadastro e Login (sem conexão com APIs);
 - Disponível em: https://pokedex-react-mateuscapoani-m3.vercel.app/
+
+## Tarefa M4:
+- Criação da tela Main;
+- Criação da tela de Detalhes dos Pokemons;
+- Integração com API https://pokeapi.co/ para get da lista e detalhes de pokemons;
+- Criação de enum e componente para melhor organização dos tipos de pokemons;
+- Disponível em: https://pokedex-react-mateuscapoani-m4.vercel.app/
