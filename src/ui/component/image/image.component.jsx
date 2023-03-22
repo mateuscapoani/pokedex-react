@@ -1,23 +1,35 @@
 import logo from '../../../assets/images/logo.png'
+import './style.css'
 
 export const Image = ({ size, src, alt }) => {
 
-  let styledSize = {
-    height: `${size ?? 100}px`
-  }
+  const renderImage = () => {
+    const styledSize = {
+      height: `${size ?? 100}px`
+    }
 
-  if (!src) {
-    styledSize = {
-      ...styledSize,
-      filter: 'grayscale(100%)'
+    if (src) {
+      return (
+        <img
+          src={src}
+          alt={alt}
+          style={styledSize}
+        />
+      )
+    } else {
+      return (
+        <div className='image__content'>
+          <img
+            src={logo}
+            alt={alt}
+            style={styledSize}
+            className='image__no-image'
+          />
+          <span className='image__no-image-text'>Sem Imagem</span>
+        </div >
+      )
     }
   }
 
-  return (
-    <img
-      src={src || logo}
-      alt={alt}
-      style={styledSize}
-    />
-  )
+  return renderImage()
 }
