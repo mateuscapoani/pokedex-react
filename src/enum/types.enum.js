@@ -1,31 +1,31 @@
 export const types = {
   normal: {
     name: 'Normal',
-    color: '#a8a878'
+    color: '#A8A878'
   },
   fighting: {
     name: 'Lutador',
-    color: '#c03028'
+    color: '#C03028'
   },
   flying: {
     name: 'Voador',
-    color: '#a890f0'
+    color: '#A890F0'
   },
   poison: {
     name: 'Venenoso',
-    color: '#a040a0'
+    color: '#A040A0'
   },
   ground: {
     name: 'Terrestre',
-    color: '#e0c068'
+    color: '#E0C068'
   },
   rock: {
     name: 'Pedra',
-    color: '#b8a038'
+    color: '#B8A038'
   },
   bug: {
     name: 'Inseto',
-    color: '#a8b820'
+    color: '#A8B820'
   },
   ghost: {
     name: 'Fantasma',
@@ -33,35 +33,35 @@ export const types = {
   },
   steel: {
     name: 'Metálico',
-    color: '#b8b8d0'
+    color: '#B8B8D0'
   },
   fire: {
     name: 'Fogo',
-    color: '#f08030'
+    color: '#F08030'
   },
   water: {
     name: 'Água',
-    color: '#6890f0'
+    color: '#6890F0'
   },
   grass: {
     name: 'Planta',
-    color: '#78c850'
+    color: '#78C850'
   },
   electric: {
     name: 'Elétrico',
-    color: '#f8d030'
+    color: '#F8D030'
   },
   psychic: {
     name: 'Psiquico',
-    color: '#f85888'
+    color: '#F85888'
   },
   ice: {
     name: 'Gelo',
-    color: '#98d8d8'
+    color: '#98D8D8'
   },
   dragon: {
     name: 'Dragão',
-    color: '#7038f8'
+    color: '#7038F8'
   },
   dark: {
     name: 'Noturno',
@@ -69,11 +69,11 @@ export const types = {
   },
   fairy: {
     name: 'Fada',
-    color: '#ee99ac'
+    color: '#EE99AC'
   },
   unknown: {
     name: '???',
-    color: '#68a090'
+    color: '#68A090'
   },
   shadow: {
     name: 'Shadow',

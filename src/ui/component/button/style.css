@@ -14,8 +14,6 @@
 
 .button__primary {
   background-color: #FEE3B8;
-  margin: 10px 20px;
-  font-size: 18px;
 }
 
 .button__primary:hover {
@@ -24,7 +22,6 @@
 
 .button__secondary {
   background-color: #FFF;
-  font-size: 16px;
 }
 
 .button__secondary:hover {
@@ -38,4 +35,19 @@
 
 .button__disabled:hover {
   background-color: #DDD;
+}
+
+.button__big {
+  margin: 10px 20px;
+  font-size: 18px;
+}
+
+.button__regular {
+  margin: 5px 10px;
+  font-size: 16px;
+}
+
+.button__small {
+  margin: 3px 5px;
+  font-size: 10px;
 }

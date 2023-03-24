@@ -1,6 +1,6 @@
 import './style.css'
 
-export const Button = ({ type, onClick, primary, disabled, children }) => {
+export const Button = ({ type, onClick, primary, big, small, disabled, children }) => {
 
   const handleClick = (event) => {
     if (onClick)
@@ -11,7 +11,7 @@ export const Button = ({ type, onClick, primary, disabled, children }) => {
   return (
     <button
       type={type ?? 'button'}
-      className={`button__button button__${primary ? 'primary' : 'secondary'} ${disabled ? 'button__disabled' : ''}`}
+      className={`button__button button__${primary ? 'primary' : 'secondary'} ${disabled ? 'button__disabled' : ''} button__${big ? 'big' : small ? 'small' : 'regular'}`}
       onClick={handleClick}
       disabled={disabled}
     >

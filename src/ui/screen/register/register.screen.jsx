@@ -75,7 +75,7 @@ export const RegisterScreen = () => {
           type='password'
           required
         />
-        <Button type='submit' primary>Registrar</Button>
+        <Button type='submit' primary big>Registrar</Button>
       </Form>
       <LinkTo to={constants.routes.login}>Login</LinkTo>
     </Container>
