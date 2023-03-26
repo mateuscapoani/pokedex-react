@@ -29,7 +29,6 @@ export const PokemonScreen = () => {
       <Container>
         <Button
           primary
-          small
           onClick={goBack}
         >
           Voltar
