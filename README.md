@@ -32,6 +32,6 @@ v16.15.0
 - Criação de enum e componente para melhor organização dos tipos e stats de pokemons;
 - Disponível em: https://pokedex-react-mateuscapoani-m4.vercel.app/
 
-## Tarefa M4:
+## Tarefa M5:
 - Aplicação atual já atende ao esperado;
 - Disponível em: https://pokedex-react-mateuscapoani.vercel.app/
